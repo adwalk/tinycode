@@ -7,6 +7,9 @@ Table[If[PrimeQ[n], Style[n, Green], n], {n, 100}]
 {Panel[1/x + y], Framed[1/x + y]}
 ```
 
+### ArrayPlot
+ ArrayPlot[RandomChoice[{Red, Green, Blue}, {19, 19}], Mesh -> True]
+
 ### Chat for GitHub
 https://gitter.im/poemus/poemus.github.io
 
