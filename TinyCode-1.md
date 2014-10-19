@@ -25,4 +25,7 @@ ArrayPlot[Table[Sin[x y], {x, -40, 40}, {y, -40, 40}],
 ### Chat for GitHub
 https://gitter.im/poemus/poemus.github.io
 
+###
+http://mathematica.stackexchange.com/questions/47441/how-to-make-a-resizable-chess-board
+
 > Written with [StackEdit](https://stackedit.io/).
