@@ -14,6 +14,14 @@ Table[If[PrimeQ[n], Style[n, Green], n], {n, 100}]
  ColorRules -> {_?EvenQ -> Red, 1 | -1 -> Blue, 
    x_ /; x < -1 -> Black}]
    
+   
+
+###
+GraphPlot[RandomChoice[{0.01, 0.99} -> {1, 0}, {100, 100}]]
+
+ArrayPlot[Table[Sin[x y], {x, -40, 40}, {y, -40, 40}], 
+ ColorFunction -> "BlueGreenYellow"]
+ 
 ### Chat for GitHub
 https://gitter.im/poemus/poemus.github.io
 
