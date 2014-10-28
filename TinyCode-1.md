@@ -31,4 +31,9 @@ http://mathematica.stackexchange.com/questions/47441/how-to-make-a-resizable-che
 ### apk downloader
 http://apkleecher.com/download/?dl=com.smule.magicpiano
 
+### 跨域请求代理
+$.get(
+    'http://www.corsproxy.com/en.wikipedia.org/wiki/Http',
+    function(response) { document.body.innerHTML = response; });
+
 > Written with [StackEdit](https://stackedit.io/).
