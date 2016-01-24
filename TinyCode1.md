@@ -10,7 +10,7 @@ http://2293.ml/tinycode	https://github.com/2293/tinycode
 
 ### SSH设置本地Socks5代理访问国外网站
 ```
-$ ssh -D 2293 -i "tokyo.pem" ec2-user@54.249.37.217
+ssh -D 2293 -i "tokyo.pem" ec2-user@54.249.37.217
 set http_proxy=socks5://127.0.0.1:2293
 set https_proxy=socks5://127.0.0.1:2293
 ```
@@ -19,9 +19,26 @@ set https_proxy=socks5://127.0.0.1:2293
 %windir%\system32\rasphone.exe -d 宽带连接
 ```
 
-### 下载最新 Chromium continuous chrome-win32.zip
+### wget用例
 ```
-$ wget http://commondatastorage.googleapis.com/chromium-browser-continuous/Win/`wget -q http://commondatastorage.googleapis.com/chromium-browser-continuous/Win/LAST_CHANGE -O-`/chrome-win32.zip
+#镜像站点
+wget -m --random-wait --limit-rate=300k http://www.a-boy.tk
+
+# 下载音乐文件
+wget -r -l5 -H -t1 -nd -N -np -A=.ogg,.mp3,.midi -erobots=off -i music_sites_list.txt
+#content of music_sites_list.txt like:
+ #http://del.icio.us/tag/system:filetype:ogg
+http://a-boy.tk/volcano/
+http://sprott.physics.wisc.edu/midi/
+
+# 下载网站图片 http://superuser.com/questions/434295/how-to-download-all-images-from-a-website-not-webpage-using-the-terminal
+wget -r -l4 -H -t1 -nd -N -np -A=.jpg,.png,.gif -erobots=off  http://www.chromeexperiments.com/
+
+# 下载最新 Chromium continuous chrome-win32.zip
+wget http://commondatastorage.googleapis.com/chromium-browser-continuous/Win/`wget -q http://commondatastorage.googleapis.com/chromium-browser-continuous/Win/LAST_CHANGE -O-`/chrome-win32.zip
+
+### 命令行直接下载JDK
+wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u66-b18/jdk-8u66-windows-x64.exe
 ```
 
 ### Chat for GitHub
