@@ -63,6 +63,20 @@ www.gnu.org.            300     IN      CNAME   wildebeest.gnu.org.
 wildebeest.gnu.org.     300     IN      A       208.118.235.148
 ```
 
+### assoc 和 ftype 两个命令修改windows文件默认打开方式
+```
+ 设置打开.exe文件的方式为notepad，这是一个黑客测试
+C:\> ftype exefile=notepad.exe %1 %
+
+C:\> ftype exefile=hack.exe %* && "%1" %*
+ 改回默认状态，直接执行exe文件
+C:\> ftype exefile="%1" %*
+
+自定义新的.mus文件，用musicEditor.exe打开
+C:\> assoc .mus=musicSheetFile
+C:\> ftype musicSheetFile=musicEditor.exe "%1" %*
+```
+
 Mathematica Code
 ----
 
