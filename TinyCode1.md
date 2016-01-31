@@ -77,6 +77,15 @@ C:\> assoc .mus=musicSheetFile
 C:\> ftype musicSheetFile=musicEditor.exe "%1" %*
 ```
 
+### 保存git密码，不用每次输入git账号密码
+```
+$ git config credential.helper store #保存git密码
+$ git config --global credential.helper 'cache --timeout 7200'  #缓存密码2小时
+```
+
+### 百度搜索建议，联想词库json调用 
+ http://suggestion.baidu.com/su?json=1&cb=queryList&wd=美女
+
 Mathematica Code
 ----
 
