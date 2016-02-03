@@ -86,6 +86,9 @@ $ git config --global credential.helper 'cache --timeout 7200'  #缓存密码2�
 ### 百度搜索建议，联想词库json调用 
  http://suggestion.baidu.com/su?json=1&cb=queryList&wd=美女
 
+### 自动跳转到某个Google镜像网址
+http://uuxia.net/g
+
 Mathematica Code
 ----
 
