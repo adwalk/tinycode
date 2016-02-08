@@ -2,7 +2,7 @@ Tiny Code 1-Chunqing Tribe
 ====
 小代码 1-纯情部落
 ====
-http://2293.ml/tinycode	https://github.com/2293/tinycode
+http://2293.tk/tinycode	https://github.com/2293/tinycode
 [toc]
 
 神奇命令行&冷酷网址
