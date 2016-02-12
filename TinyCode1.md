@@ -114,6 +114,11 @@ GraphPlot[RandomChoice[{0.01, 0.99} -> {1, 0}, {100, 100}]]
 ArrayPlot[Table[Sin[x y], {x, -40, 40}, {y, -40, 40}], 
  ColorFunction -> "BlueGreenYellow"]
 ```
+### JuliaSetPlot
+JuliaSetPlot[.133 + .591 I]
+
+![JuliaSetPlot](./1-img/JuliaSetPlot.png)
+
 
 科研进展&学术动态
 ----
