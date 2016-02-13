@@ -126,6 +126,14 @@ JuliaSetPlot[.133 + .591 I]
 ### 2^74207281-1 is Prime | Hacker News
 On January 7th at 22:30 UTC 2016, the Great Internet Mersenne Prime Search (GIMPS) celebrated its 20th anniversary with the math discovery of the new largest known prime number, 2^74,207,281-1, having 22,338,618 digits, on a university computer volunteered by Curtis Cooper for the project.
 
+### 优秀软件
++ 数学三剑: Mathematica Sagemath Geogebra
++ HexChat - an IRC client based on XChat, open source, GUI
++ CCleaner - PC Optimization and Cleaning
++ Paint.NET - is free image and photo editing software for computers that run Windows.
++ ShareX - is a free and open source program that lets you capture or record any area of your screen and share it with a single press of a key. It also allows uploading images, text or other types of files to over 50 supported destinations you can choose from.  https://github.com/ShareX/ShareX
++ VLC media player
+
 诗歌名句
 ----
 
