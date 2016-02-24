@@ -79,10 +79,20 @@ C:\> assoc .mus=musicSheetFile
 C:\> ftype musicSheetFile=musicEditor.exe "%1" %*
 ```
 
-### 保存git密码，不用每次输入git账号密码
+### git使用精要
+
+保存git密码，不用每次输入git账号密码
 ```
 $ git config credential.helper store #保存git密码
 $ git config --global credential.helper 'cache --timeout 7200'  #缓存密码2小时
+```
+switch and delete branch by using
+```
+$ git checkout gh-pages
+Switched to branch 'gh-pages'
+$ git branch --delete master # delete a branch in local
+$ git push origin --delete master   # delete a remote branch master, which is easier to remember than git push origin :<branchName>
+
 ```
 
 ### 百度搜索建议，联想词库json调用 
