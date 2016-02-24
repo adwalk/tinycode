@@ -7,6 +7,119 @@ https://github.com/2293/tinycode
 
 [toc]
 
+HTML&Javascript&CSS
+----
+
+### ES6 & Javascript in Harmony
+```
+//const
+ const PI = 3.14159265359;
+ let circumference = 2 * PI * r;
+ 
+ //Arrow functions
+ var sq = x => x * x
+ var getName = () => "Pablo";
+ 
+ //Destructured assignment
+ var [d, m, y] = [13, 2, 1963];
+ 
+  // useful for swapping
+    [x, y] = [y, x]
+    
+     // or multiple return values
+    function now(){ return [13, 2, 2013, 8, 0]; }
+    var [d, m] = now(); // d = 13, m = 2
+    var [,,y] = now(); // y = 2013
+    
+   // Destructuring also works with objects.
+    function today() { return { d:13, m:2, y:1963 }; }
+    var { m:month, y:year } = today(); 
+// month = 2, year = 1963
+
+//Default Parameters
+function myFunc( url, timeout=3000, callback=function(){} )
+
+//Rest Parameters
+function sum(first, second, ...others){
+      console.log(others.length);
+}
+
+//Spread Operator
+//Spread is the opposite of Rest parameters and splits an array into individual parameters.
+    var a = [1,2,3,4,5]
+    max = Math.max(...a) 
+// equivalent to Math.max.apply(null,a) 
+// or Math.max(1,2,3,4,5)
+
+//Destructured Parameters
+//Similar to a destructured assignment.
+function setCookie( name, val, { secure, path, domain, expires })
+
+//Iterators and Generators
+//ES6 collection objects (like arrays, maps and sets) all have three default iterators. These are entries(), values() and keys() and cover most common iteration needs.
+var a=['one','two','three']
+    for(let e of a.entries()) console.log(e)
+    
+//array comprehensions.
+    [ x for (x of a) if (x>5) ]
+ 
+ /* A generator is a special kind of function that returns an iterator by inserting a * after the function keyword. A new yield keyword is used inside of generators to specify values that iterator should return when next() is called.*/
+ 
+ function* gen(){
+      yield 1;
+      yield 2;
+      yield 3;
+    }
+    let it = gen();
+    for(let i of it) console.log(i); 
+// outputs 1 2 3
+
+//Collections: Set Map
+let s = new Set([1,2,3]);
+    s.has(4);     // false
+    s.add(4);     // [1,2,3,4]
+    s.add(2);     // still [1,2,3,4]
+    s.delete(3);  // [1,2,4]
+    
+let m = new Map();
+    o = {x:'blah'};
+    m.set(o,'something to store');
+    m.has(o); // true
+    console.log(m.get(o));
+    
+//Maps can also be used with iterators.
+    for (let [k, v] of m) console.log(k, v);
+    
+/*Symbols
+Symbols generate unique inaccessible keys, useful in maps and class private members.
+*/
+let a = Map();
+    {
+      let k = Symbol();
+      a.set(k, 'value');
+// Here, we can get and reset 'value' as a.get(k).
+    }
+// Here, a.get(k) is invalid, a.size is 1, 
+// but the key cannot be seen.
+
+//WeakMap WeakSet
+
+//Template Strings
+   var name = 'Paul', age = 99;
+   var s = `$(name), is apparently
+     $(age) years old`;
+
+/*Promises
+Promises are a mechanism for handling results (and errors) from asynchronous operations. You can achieve the same thing with callbacks, but promises provide improved readability via method chaining and simple error handling. Promises are already used in many JavaScript libraries.*/
+
+    getJSON("/api/product/1").then( function(p) {
+      return getJSON(p.description);
+    }).catch(function(err) {
+      console.log('Oops..',err)
+    });   
+    
+```
+
 神奇命令行&冷酷网址
 ----
 
