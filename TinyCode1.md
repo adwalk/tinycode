@@ -193,6 +193,29 @@ C:\> ftype musicSheetFile=musicEditor.exe "%1" %*
 ```
 
 ### git使用精要
+You can obtain Vim for the first time with:
+```
+git clone https://github.com/vim/vim.git
+```
+
+And, if you don't have local changes, update to the latest version with:
+```
+cd vim
+git pull
+```
+If you made some changes, e.g. to a makefile, you can keep them and merge with the latest version with:
+```
+git stash
+git pull
+git stash pop
+```
+
+If you have local changes you may need to merge. If you are sure you can discard local changes (e.g. if you were just trying a patch), you can use:
+
+```
+git fetch --all
+git reset --hard origin/master
+```
 
 保存git密码，不用每次输入git账号密码
 ```
