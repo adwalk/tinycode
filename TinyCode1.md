@@ -214,6 +214,16 @@ $ git push origin --delete master   # delete a remote branch master, which is ea
 ### 自动跳转到某个Google镜像网址
 http://uuxia.net/g
 
+### web ide for Android, Java, python, HTML, Nodejs, markdown...
+- https://ide.monaca.mobi
+- http://dabblet.com/
+- https://orionhub.org
+- http://codepen.io
+- prose.io
+- stackedit.io
+- cloud.sagemath.com
+- cloud.wolfram.com
+
 Mathematica Code
 ----
 
