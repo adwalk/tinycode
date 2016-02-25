@@ -123,12 +123,13 @@ Promises are a mechanism for handling results (and errors) from asynchronous ope
 神奇命令行&冷酷网址
 ----
 
-### SSH设置本地Socks5代理访问国外网站
+### SSH设置本地Socks5代理访问国外网站， Openshift等云服务提供了免费ssh登录
 ```
 ssh -D 2293 -i "tokyo.pem" ec2-user@54.249.37.217
 set http_proxy=socks5://127.0.0.1:2293
 set https_proxy=socks5://127.0.0.1:2293
 ```
+
 ### 命令行里进行宽带连接
 ```
 %windir%\system32\rasphone.exe -d 宽带连接
