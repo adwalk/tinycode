@@ -160,6 +160,18 @@ http://uuxia.net/g
 - cloud.sagemath.com
 - cloud.wolfram.com
 
+google adsense
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- auto -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9506751992947371"
+     data-ad-slot="5600519289"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
 HTML&Javascript&CSS
 ----
