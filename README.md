@@ -1,7 +1,9 @@
-TinyCode 小代码 Big data, Tiny Code1
+TinyCode 小代码
 =======================
+Big data, Tiny Code
 
-《Tiny Code》电子期刊，中文名《小代码》
+
+《Tiny Code》电子期刊
 
 [![Gitter](https://badges.gitter.im/2293/tinycode.svg)](https://gitter.im/2293/tinycode?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
