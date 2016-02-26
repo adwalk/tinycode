@@ -7,6 +7,160 @@ https://github.com/2293/tinycode
 
 [toc]
 
+人物风云
+----
+
+
+
+神奇命令行&冷酷网址
+----
+
+### SSH设置本地Socks5代理访问国外网站， Openshift等云服务提供了免费ssh登录
+```
+ssh -D 2293 -i "tokyo.pem" ec2-user@54.249.37.217
+set http_proxy=socks5://127.0.0.1:2293
+set https_proxy=socks5://127.0.0.1:2293
+```
+
+### 命令行里进行宽带连接
+```
+%windir%\system32\rasphone.exe -d 宽带连接
+```
+
+### wget用例
+```
+#镜像站点
+wget -m --random-wait --limit-rate=300k http://www.a-boy.tk
+
+# 下载音乐文件
+wget -r -l5 -H -t1 -nd -N -np -A=.ogg,.mp3,.midi -erobots=off -i music_sites_list.txt
+#content of music_sites_list.txt like:
+ #http://del.icio.us/tag/system:filetype:ogg
+http://a-boy.tk/volcano/
+http://sprott.physics.wisc.edu/midi/
+
+# 下载网站图片 http://superuser.com/questions/434295/how-to-download-all-images-from-a-website-not-webpage-using-the-terminal
+wget -r -l4 -H -t1 -nd -N -np -A=.jpg,.png,.gif -erobots=off  http://www.chromeexperiments.com/
+
+# 下载最新 Chromium continuous chrome-win32.zip
+wget http://commondatastorage.googleapis.com/chromium-browser-continuous/Win/`wget -q http://commondatastorage.googleapis.com/chromium-browser-continuous/Win/LAST_CHANGE -O-`/chrome-win32.zip
+
+### 命令行直接下载JDK
+wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u66-b18/jdk-8u66-windows-x64.exe
+```
+
+### Chat for GitHub
+https://gitter.im/2293/ppmm
+
+### make-a-resizable-chess-board
+http://mathematica.stackexchange.com/questions/47441/how-to-make-a-resizable-chess-board
+
+### apk downloader
+http://apkleecher.com/download/?dl=com.smule.magicpiano
+http://apkpure.com
+
+###  lookup IP address and a domain name
+```
+$ host google.com
+google.com has address 216.58.220.206
+google.com has IPv6 address 2404:6800:4004:80d::1006
+google.com mail is handled by 40 alt3.aspmx.l.google.com.
+
+$ dig +noall +answer www.gnu.org
+www.gnu.org.            300     IN      CNAME   wildebeest.gnu.org.
+wildebeest.gnu.org.     300     IN      A       208.118.235.148
+```
+
+### assoc 和 ftype 两个命令修改windows文件默认打开方式
+```
+ 设置打开.exe文件的方式为notepad，这是一个黑客测试
+C:\> ftype exefile=notepad.exe %1 %
+
+C:\> ftype exefile=hack.exe %* && "%1" %*
+ 改回默认状态，直接执行exe文件
+C:\> ftype exefile="%1" %*
+
+自定义新的.mus文件，用musicEditor.exe打开
+C:\> assoc .mus=musicSheetFile
+C:\> ftype musicSheetFile=musicEditor.exe "%1" %*
+```
+
+### git使用精要
+You can obtain Vim for the first time with:
+```
+git clone https://github.com/vim/vim.git
+```
+
+And, if you don't have local changes, update to the latest version with:
+```
+cd vim
+git pull
+```
+If you made some changes, e.g. to a makefile, you can keep them and merge with the latest version with:
+```
+git stash
+git pull
+git stash pop
+```
+
+If you have local changes you may need to merge. If you are sure you can discard local changes (e.g. if you were just trying a patch), you can use:
+```
+git fetch --all
+git reset --hard origin/master
+```
+
+提交，与修改最后一次提交
+```
+$ git commit -m 'initial commit'
+
+$ git add forgotten_file
+$ git commit --amend
+```
+
+回退到某一版本,并推送之仓库
+```
+git reset --hard 0d1d7fc32
+git push origin HEAD --force
+```
+
+提交，接着撤销(undo)这次提交
+```
+$ git commit -m 'xxx'
+
+$ git reset --soft HEAD^  
+```
+
+保存git密码，不用每次输入git账号密码
+```
+$ git config credential.helper store #保存git密码
+$ git config --global credential.helper 'cache --timeout 7200'  #缓存密码2小时
+```
+
+switch and delete branch by using
+```
+$ git checkout gh-pages
+Switched to branch 'gh-pages'
+$ git branch --delete master # delete a branch in local
+$ git push origin --delete master   # delete a remote branch master, which is easier to remember than git push origin :<branchName>
+```
+
+### 百度搜索建议，联想词库json调用 
+ http://suggestion.baidu.com/su?json=1&cb=queryList&wd=美女
+
+### 自动跳转到某个Google镜像网址
+http://uuxia.net/g
+
+### web ide for Android, Java, python, HTML, Nodejs, markdown...
+- https://ide.monaca.mobi
+- http://dabblet.com/
+- https://orionhub.org
+- http://codepen.io
+- prose.io
+- stackedit.io
+- cloud.sagemath.com
+- cloud.wolfram.com
+
+
 HTML&Javascript&CSS
 ----
 
@@ -120,133 +274,6 @@ Promises are a mechanism for handling results (and errors) from asynchronous ope
     
 ```
 
-神奇命令行&冷酷网址
-----
-
-### SSH设置本地Socks5代理访问国外网站， Openshift等云服务提供了免费ssh登录
-```
-ssh -D 2293 -i "tokyo.pem" ec2-user@54.249.37.217
-set http_proxy=socks5://127.0.0.1:2293
-set https_proxy=socks5://127.0.0.1:2293
-```
-
-### 命令行里进行宽带连接
-```
-%windir%\system32\rasphone.exe -d 宽带连接
-```
-
-### wget用例
-```
-#镜像站点
-wget -m --random-wait --limit-rate=300k http://www.a-boy.tk
-
-# 下载音乐文件
-wget -r -l5 -H -t1 -nd -N -np -A=.ogg,.mp3,.midi -erobots=off -i music_sites_list.txt
-#content of music_sites_list.txt like:
- #http://del.icio.us/tag/system:filetype:ogg
-http://a-boy.tk/volcano/
-http://sprott.physics.wisc.edu/midi/
-
-# 下载网站图片 http://superuser.com/questions/434295/how-to-download-all-images-from-a-website-not-webpage-using-the-terminal
-wget -r -l4 -H -t1 -nd -N -np -A=.jpg,.png,.gif -erobots=off  http://www.chromeexperiments.com/
-
-# 下载最新 Chromium continuous chrome-win32.zip
-wget http://commondatastorage.googleapis.com/chromium-browser-continuous/Win/`wget -q http://commondatastorage.googleapis.com/chromium-browser-continuous/Win/LAST_CHANGE -O-`/chrome-win32.zip
-
-### 命令行直接下载JDK
-wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u66-b18/jdk-8u66-windows-x64.exe
-```
-
-### Chat for GitHub
-https://gitter.im/2293/ppmm
-
-### make-a-resizable-chess-board
-http://mathematica.stackexchange.com/questions/47441/how-to-make-a-resizable-chess-board
-
-### apk downloader
-http://apkleecher.com/download/?dl=com.smule.magicpiano
-http://apkpure.com
-
-###  lookup IP address and a domain name
-```
-$ host google.com
-google.com has address 216.58.220.206
-google.com has IPv6 address 2404:6800:4004:80d::1006
-google.com mail is handled by 40 alt3.aspmx.l.google.com.
-
-$ dig +noall +answer www.gnu.org
-www.gnu.org.            300     IN      CNAME   wildebeest.gnu.org.
-wildebeest.gnu.org.     300     IN      A       208.118.235.148
-```
-
-### assoc 和 ftype 两个命令修改windows文件默认打开方式
-```
- 设置打开.exe文件的方式为notepad，这是一个黑客测试
-C:\> ftype exefile=notepad.exe %1 %
-
-C:\> ftype exefile=hack.exe %* && "%1" %*
- 改回默认状态，直接执行exe文件
-C:\> ftype exefile="%1" %*
-
-自定义新的.mus文件，用musicEditor.exe打开
-C:\> assoc .mus=musicSheetFile
-C:\> ftype musicSheetFile=musicEditor.exe "%1" %*
-```
-
-### git使用精要
-You can obtain Vim for the first time with:
-```
-git clone https://github.com/vim/vim.git
-```
-
-And, if you don't have local changes, update to the latest version with:
-```
-cd vim
-git pull
-```
-If you made some changes, e.g. to a makefile, you can keep them and merge with the latest version with:
-```
-git stash
-git pull
-git stash pop
-```
-
-If you have local changes you may need to merge. If you are sure you can discard local changes (e.g. if you were just trying a patch), you can use:
-
-```
-git fetch --all
-git reset --hard origin/master
-```
-
-保存git密码，不用每次输入git账号密码
-```
-$ git config credential.helper store #保存git密码
-$ git config --global credential.helper 'cache --timeout 7200'  #缓存密码2小时
-```
-switch and delete branch by using
-```
-$ git checkout gh-pages
-Switched to branch 'gh-pages'
-$ git branch --delete master # delete a branch in local
-$ git push origin --delete master   # delete a remote branch master, which is easier to remember than git push origin :<branchName>
-
-```
-
-### 百度搜索建议，联想词库json调用 
- http://suggestion.baidu.com/su?json=1&cb=queryList&wd=美女
-
-### 自动跳转到某个Google镜像网址
-http://uuxia.net/g
-
-### web ide for Android, Java, python, HTML, Nodejs, markdown...
-- https://ide.monaca.mobi
-- http://dabblet.com/
-- https://orionhub.org
-- http://codepen.io
-- prose.io
-- stackedit.io
-- cloud.sagemath.com
-- cloud.wolfram.com
 
 Mathematica Code
 ----
@@ -394,3 +421,10 @@ On January 7th at 22:30 UTC 2016, the Great Internet Mersenne Prime Search (GIMP
 	
 	
 	--
+
+创意与实验
+----
+
+
+游戏秘笈
+----
