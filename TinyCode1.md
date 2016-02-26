@@ -286,6 +286,10 @@ Promises are a mechanism for handling results (and errors) from asynchronous ope
     
 ```
 
+### Javascript bookmarklets
+Drag a bookmarklet to your browser bookmarkbar, click it...
+
+<a href="javascript:(function(){ var text = document.getSelection().toString() || document.title; speechSynthesis.speak( new SpeechSynthesisUtterance(text));}())">Speak selected text in Chrome or Opera</a>
 
 Mathematica Code
 ----
