@@ -1,7 +1,9 @@
-TinyCode 小代码
+TinyCode 小代码 Big data, Tiny Code1
 =======================
 
 《Tiny Code》电子期刊，中文名《小代码》
+
+[![Gitter](https://badges.gitter.im/2293/tinycode.svg)](https://gitter.im/2293/tinycode?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 docs.google.com/ tinycode Everyone can edit
 ===
