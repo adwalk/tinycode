@@ -144,6 +144,19 @@ $ git branch --delete master # delete a branch in local
 $ git push origin --delete master   # delete a remote branch master, which is easier to remember than git push origin :<branchName>
 ```
 
+### vagrant and Data Science at the Command Line
+http://datasciencetoolbox.org/
+Download and install VirtualBox, Vagrant, then
+```
+mkdir MyDataScienceToolbox; cd MyDataScienceToolbox
+vagrant init data-science-toolbox/dst
+vagrant up
+
+vagrant ssh
+
+vagrant halt
+```
+
 ### 百度搜索建议，联想词库json调用 
  http://suggestion.baidu.com/su?json=1&cb=queryList&wd=美女
 
