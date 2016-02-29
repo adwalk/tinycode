@@ -163,6 +163,9 @@ vagrant halt
 ### 自动跳转到某个Google镜像网址
 http://uuxia.net/g
 
+### 同时打开多个搜索引擎
+http://2293.tk/s
+
 ### web ide for Android, Java, python, HTML, Nodejs, markdown...
 - https://ide.monaca.mobi
 - http://dabblet.com/

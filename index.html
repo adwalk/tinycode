@@ -5,6 +5,7 @@
 	<title>Tiny Code - 2293.tk</title>
 	<meta name="author" content="a-boy">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="lib/marked.js"></script>
 </head>
 <body>
 	<nav><strong>Tiny Code</strong> - <a href="http://2293.tk">2293.tk</a></nav>
@@ -24,7 +25,20 @@
 	<a href="TinyCode1.md">《小代码 1-纯情部落》</a><br>
 	《小代码 2-浪沫迩来》<br>
 	《小代码 3-陨石海沙》<br>
-	
+	<input type="text" name="mdfilename" id="mdfilename" value="TinyCode1.md"><input type="button" value="预览" onclick="preview(document.getElementById('mdfilename').value)">
+	<div id="preview"></div>
+	<script>
+	function preview(url){
+		var req = new XMLHttpRequest();
+		req.open("GET", url, true);
+		//req.responseType="json";
+		req.onload = function(){
+			 document.getElementById('preview').innerHTML = marked(req.response)
+		}
+		req.send(null);
+	}
+	preview('TinyCode1.md');
+  </script>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
