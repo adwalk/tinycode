@@ -2,6 +2,7 @@ TinyCode 小代码
 =======================
 Big data, Tiny Code
 
+又名《火星人学习报》
 
 《Tiny Code》电子期刊
 
@@ -19,3 +20,4 @@ docs.google.com/ tinycode Everyone can edit
 ===
 
 - 2015-10-31 [《小代码▪1》](https://github.com/2293/tinycode/blob/gh-pages/TinyCode1.md)开始编辑，采用简单的markdown格式
+- 2016-03-01 [《小代码▪1》](https://github.com/2293/tinycode/blob/gh-pages/TinyCode1.md)更新大量内容
