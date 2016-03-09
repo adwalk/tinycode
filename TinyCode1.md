@@ -192,6 +192,10 @@ http://uuxia.net/g
 ### 同时打开多个搜索引擎
 http://2293.tk/s
 
+### 在线中文拼音注音工具
+- http://www.iamwawa.cn/pinyinzhuyin.asp
+- http://www.cncorpus.org/CpsPinyinTagger.aspx
+
 ### web ide for Android, Java, python, HTML, Nodejs, markdown...
 - https://ide.monaca.mobi
 - http://dabblet.com/
@@ -549,8 +553,41 @@ Rank 3:
 
 不推荐长期吃的其他食品: 牛奶、酸奶、瓶装果汁、饮料、卤菜、猪脚、动物肠肝肺等内脏、油炸品、铁板加工零食、魔芋块、腊肉、腊鱼、蛋炒饭
 
+### 有趣的植物
+> 利用泛搜 http://2293.tk/s 认识下这些奇异的花草树木吧
 
-
+- 桫suō椤luó  （学名：Alsophila spinulosa (Wall. ex Hook.) R. M. Tryon），别名蛇木，是桫椤科、桫椤属蕨类植物，有“蕨类植物之王”赞誉。
+- 三色堇jǐn    Viola tricolor, known as heartsease
+- 火绒草    Leontopodium alpinum, commonly called edelweiss, is a well-known mountain flower, belonging to the Asteraceae. The plant prefers rocky limestone places at about 1800–3000 m altitude.
+- 雪莲
+- 胡杨林
+- 纺锤树
+- 睡莲
+- 极地白花
+- 猴面包树
+- 桐花树
+- 捕蝇草
+- 猪笼草
+- 瓶子草
+- 菟tù丝子
+- 槲hú寄生
+- 相思豆
+- 曼陀罗
+- 荨qián麻
+- 罂粟yīng sù 
+- 珙桐gǒng tóng
+- 望天树
+- 豇jiāng豆
+- 苫shān豆
+- 苜蓿mù xu
+- 翘摇
+- 箭毒木
+- 啤pí酒花
+- 鸢yuān尾花
+- 木槿jǐn花
+- 薰xūn衣草
+- 密蒙花
+- 香蜂草
 
 创意与实验
 ----
