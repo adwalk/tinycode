@@ -5,7 +5,7 @@ Tiny Code 1-Chunqing Tribe
 
 又名 《火星人学习报》第1期 代号:纯情部落 2016年3月
 
-http://2293.tk/tinycode
+http://2293.ml/tinycode
 https://github.com/2293/tinycode
 
 [toc]
@@ -180,7 +180,7 @@ vagrant halt
 http://uuxia.net/g
 
 ### 同时打开多个搜索引擎
-http://2293.tk/s
+http://2293.ml/s
 
 ### 在线中文拼音注音工具
 - http://www.iamwawa.cn/pinyinzhuyin.asp
@@ -340,10 +340,11 @@ Table[If[PrimeQ[n], Style[n, Green], n], {n, 100}]
 ### ArrayPlot
 ```
  ArrayPlot[RandomChoice[{Red, Green, Blue}, {19, 19}], Mesh -> True]
- 
+ /*
  ArrayPlot[{{-1, 0, 1}, {2, 3, -5}, {1, 2, 1}}, 
  ColorRules -> {_?EvenQ -> Red, 1 | -1 -> Blue, 
    x_ /; x < -1 -> Black}]
+ */
 ``` 
 
 ### GraphPlot
@@ -545,7 +546,7 @@ Rank 3:
 不推荐长期吃的其他食品: 牛奶、酸奶、瓶装果汁、饮料、卤菜、猪脚、动物肠肝肺等内脏、油炸品、铁板加工零食、魔芋块、腊肉、腊鱼、蛋炒饭
 
 ### 有趣的植物
-> 利用泛搜 http://2293.tk/s 认识下这些奇异的花草树木吧
+> 利用泛搜 http://2293.ml/s 认识下这些奇异的花草树木吧
 
 - 桫suō椤luó  （学名：Alsophila spinulosa (Wall. ex Hook.) R. M. Tryon），别名蛇木，是桫椤科、桫椤属蕨类植物，有“蕨类植物之王”赞誉。
 - 三色堇jǐn    Viola tricolor, known as heartsease
