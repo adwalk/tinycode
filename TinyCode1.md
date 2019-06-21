@@ -14,16 +14,6 @@ https://github.com/2293/tinycode
 ----
 
 
-Linus Torvalds, 1969, the founder of Linux    https://twitter.com/linus__torvalds
-
-Brendan Eich, 1961, the creator of JavaScript    https://brendaneich.com/
-
-Guido van Rossum, 1956, known for creating the Python programming language
-
-James Gosling, 1955, Java    http://nighthacks.com/
-
-Stephen Wolfram, 1959, the creator of Mathematica    http://www.stephenwolfram.com/
-
 
 90后十佳少女作家
 - ![](./1-img/原筱菲.jpg)原筱菲
@@ -68,8 +58,8 @@ http://sprott.physics.wisc.edu/midi/
 # 下载网站图片 http://superuser.com/questions/434295/how-to-download-all-images-from-a-website-not-webpage-using-the-terminal
 wget -r -l4 -H -t1 -nd -N -np -A=.jpg,.png,.gif -erobots=off  http://www.chromeexperiments.com/
 
-# 下载最新 Chromium continuous chrome-win32.zip
-wget http://commondatastorage.googleapis.com/chromium-browser-continuous/Win/`wget -q http://commondatastorage.googleapis.com/chromium-browser-continuous/Win/LAST_CHANGE -O-`/chrome-win32.zip
+# 下载最新 Chromium snashot chrome-win32.zip
+wget http://commondatastorage.googleapis.com/chromium-browser-snapshot/Win/`wget -q http://commondatastorage.googleapis.com/chromium-browser-snapshot/Win/LAST_CHANGE -O-`/chrome-win32.zip
 
 ### 命令行直接下载JDK
 wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u66-b18/jdk-8u66-windows-x64.exe

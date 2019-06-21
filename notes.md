@@ -1,5 +1,5 @@
 Tiny Code No.1	小代码 第1期
-===================
+==
 
 #### Framed, Style an object
 tags: Mathematica
@@ -27,8 +27,7 @@ ArrayPlot[Table[Sin[x y], {x, -40, 40}, {y, -40, 40}],
  ColorFunction -> "BlueGreenYellow"]
 ```
  
-#### Chat for GitHub
-https://gitter.im/poemus/poemus.github.io
+
 
 #### make-a-resizable-chess-board
 http://mathematica.stackexchange.com/questions/47441/how-to-make-a-resizable-chess-board
