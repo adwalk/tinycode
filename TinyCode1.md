@@ -338,14 +338,14 @@ Table[If[PrimeQ[n], Style[n, Green], n], {n, 100}]
 ```
 
 ### ArrayPlot
+
 ```
  ArrayPlot[RandomChoice[{Red, Green, Blue}, {19, 19}], Mesh -> True]
- /*
- ArrayPlot[{{-1, 0, 1}, {2, 3, -5}, {1, 2, 1}}, 
+ 
+ ArrayPlot[{	{-1, 0, 1}, {2, 3, -5}, {1, 2, 1}	}, 
  ColorRules -> {_?EvenQ -> Red, 1 | -1 -> Blue, 
    x_ /; x < -1 -> Black}]
- */
-``` 
+```
 
 ### GraphPlot
 ```
