@@ -338,7 +338,6 @@ Table[If[PrimeQ[n], Style[n, Green], n], {n, 100}]
 ```
 
 ### ArrayPlot
-<!--
 ```
  ArrayPlot[RandomChoice[{Red, Green, Blue}, {19, 19}], Mesh -> True]
  
