@@ -160,6 +160,15 @@ $ git branch --delete master # delete a branch in local
 $ git push origin --delete master   # delete a remote branch master, which is easier to remember than git push origin :<branchName>
 ```
 
+```
+git remote set-url origin https://a-boy@github.com/a-boy/playmath #远程地址中带上用户名,Git 1.9以前的版本就会不再回应403 Forbidden而是询问密码
+git remote set-url --add origin git@gitee.com:a-boy/playmath.git # 源origin增加一个远程地址，实现两个repo同步
+git remote --verbose #查看所有的远程地址情况
+
+git remote add giteeorigin git@gitee.com:a-boy/playmath.git #也可选择不增加源origin的远程地址，而另增一个源giteeorigin
+git push giteeorigin master # 推送到源giteeorigin
+```
+
 ### vagrant and Data Science at the Command Line
 http://datasciencetoolbox.org/
 Download and install VirtualBox, Vagrant, then
