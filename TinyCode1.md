@@ -169,6 +169,17 @@ git remote add giteeorigin git@gitee.com:a-boy/playmath.git #也可选择不增�
 git push giteeorigin master # 推送到源giteeorigin
 ```
 
+fork and sync. Here 2293/jaxedit was forked from zohooo/jaxedit,now to sync:
+```
+PS F:\cloud\github\jaxedit> git remote --verbose
+origin  https://github.com/2293/jaxedit.git (fetch)
+origin  https://github.com/2293/jaxedit.git (push)
+upstream        https://github.com/zohooo/jaxedit.git (fetch)
+upstream        https://github.com/zohooo/jaxedit.git (push)
+PS F:\cloud\github\jaxedit> git fetch upstream
+PS F:\cloud\github\jaxedit> git merge upstream/master
+Updating e88e70e..062430f
+```
 ### vagrant and Data Science at the Command Line
 http://datasciencetoolbox.org/
 Download and install VirtualBox, Vagrant, then
