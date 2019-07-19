@@ -19,7 +19,7 @@ docs.google.com/ tinycode Everyone can edit
 记录
 ===
 
-1. 2015-10-31 [《小代码▪1》](./blob/master/TinyCode1.md)开始编辑，采用简单的markdown格式
-2. 2016-03-01 [《小代码▪1》](./blob/master/TinyCode1.md)更新大量内容
-3. 2019-07-19 [《小代码▪2》](./blob/master/TinyCode2.md)开始编辑, 简要介绍了node-webkit开发桌面应用快速入门......
+1. 2015-10-31 [《小代码▪1》](./TinyCode1.md)开始编辑，采用简单的markdown格式
+2. 2016-03-01 [《小代码▪1》](./TinyCode1.md)更新大量内容
+3. 2019-07-19 [《小代码▪2》](./TinyCode2.md)开始编辑, 简要介绍了node-webkit开发桌面应用快速入门......
 
