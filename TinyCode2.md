@@ -32,6 +32,7 @@ ipconfig /all  #可查到mac地址，即以太网适配器的物理地址
 
 ### 查看网络活动连接，将为您提供当前打开的端口和相关IP地址的列表
 netstat -an
+netstat -ano|findstr "80" #端口占用查询
 
 ### 超级ping，返回一个跃点跟踪列表
 ```
@@ -103,6 +104,26 @@ shutdown /h        # 休眠（hibernate）本地计算机
 shutdown /r /o #重启你的电脑进入高级启动选项菜单，你可以在这里访问安全模式和Windows恢复实用程序 
 shutdown /s /t 30 # 30秒后关闭计算机
 ```              
+
+### sfc, System File Checker
+sfc, System File Checker是一种自动扫描和修复工具，专注于Windows系统文件
+
+### tasklist 和 taskkill
+```
+tasklist /svc #显示与每个任务相关的服务  
+tasklist /v   #详细任务列表  
+tasklist /m   #定位与活动任务相关的DLL文件
+TASKKILL /F /IM QQ* /T #强制结束QQ开头的进程及其子进程
+taskkill /F /pid 3328 /pid 3360 /T
+```
+
+### 发送消息给局域网内的Windows在线用户
+msg /server:192.168.0.102 * "你好,聊会儿吧"
+
+### 显示完整的无线设备和网络信息
+netsh wlan show all
+
+netsh(Network Shell) 是一个windows系统本身提供的功能强大的网络配置命令行工具
 
 
 HTML&Javascript&CSS
@@ -234,3 +255,4 @@ arr.slice().sort(() => Math.random() - 0.5)
 `)()
 
 ```
+
