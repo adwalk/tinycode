@@ -16,10 +16,35 @@ https://github.com/2293/tinycode/
 
 神奇命令行&冷酷网址
 ----
-自由钢琴  http://www.autopiano.cn  
-纯情部落  http://2293.ml  
+1. 自由钢琴  http://www.autopiano.cn  
+2. https://music.mli.im/music.web  
+3. PowerPoint幻灯片制作工具：https://www.powtoon.com/home/ 
+4. GIF动画在线编辑器：https://ezgif.com/ 
+5. 在线图表制作协作平台：https://creately.com/ 
+6. 免费超大文件中转站：https://wetransfer.com/ 
+7. 人工智能自动绘画工具：https://www.autodraw.com/ 
+8. 免费网站幻灯片制作工具：http://wowslider.com/ 
+0. 纯情部落  http://2293.ml  
 
 ### Windows 10的资源管理器地址栏中输入cmd, 则打开命令行窗口并处于当前路径
+
+### C:\Windows\system32>help
+```
+获取某个命令的帮助
+C:> help doskey
+C:> doskey /?
+
+列出原生的DOS命令
+C:\Windows\system32>help
+有关某个命令的详细信息，请键入 HELP 命令名
+ASSOC          显示或修改文件扩展名关联。
+ATTRIB         显示或更改文件属性。
+BREAK          设置或清除扩展式 CTRL+C 检查。
+BCDEDIT        设置启动数据库中的属性以控制启动加载。
+CACLS          显示或修改文件的访问控制列表(ACL)。
+CALL           从另一个批处理程序调用这一个。
+...
+```
 
 ### 获取安装的驱动程序信息
 driverquery -v
@@ -239,9 +264,21 @@ Linux中合并的命令行为:
     ~~ "-3.05" // -3 ， 这里~~代替了parseInt的作用
     ~~ "3.2E10" // 1935228928
     +"-12.56"   // -12.56 ， parseInt
+    +new Date   // 时间微秒值再取整，例如1563763275275
+    2.33 | 0    // 2
+    2.33 >> 0   // 2
     +!![]       // 1 , +!![]===+true===1
+    ++[[]][+[]]+[+[]] == 10
     v=[] && 10  // 10
     v=[] || 10  // []
+    [66] + 10;  //'6610'
+    10 + [66];  //"1066"
+    [{}] + 10;  //"[object Object]10"
+    (10)["toString"]() === "10"
+    Array(3).fill('a') // ["a", "a", "a"]
+
+//Chrome中奇怪的js运算
+parseInt(0.0000008) // 8
 
 // 创建过去七天的数组
 [...Array(7).keys()].map(days => new Date(Date.now() - 86400000 * days));
@@ -274,5 +311,27 @@ arr.slice().sort(() => Math.random() - 0.5)
 
 `)()
 
+```
+
+//数字从右边起，隔三位加上一个逗号
+'1234567890'.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+
+
+Python 奇巧异技
+----
+
+### 无限字符动画
+```
+python -c "while 1:import random;print(random.choice('^_^'), end='')"
+```
+
+### 一行代码看漫画
+import antigravity
+
+###
+```
+print('\n'.join([' '.join(['%s*%s=%-2s' % (y, x, x*y) for y in range(1, x+1)]) for x in range(1, 10)]))
+
+print('\n'.join([''.join([('IloveU'[(x-y)%len('IloveU')]if((x*0.05)**2+(y*0.1)**2-1)**3-(x*0.05)**2*(y*0.1)**3<=0 else' ')for x in range(-30,30)])for y in range(15,-15,-1)]))
 ```
 
