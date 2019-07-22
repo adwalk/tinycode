@@ -28,7 +28,7 @@ driverquery -v
 ipconfig /release  
 ipconfig /renew  
 ipconfig /flushdns  
-ipconfig /all  #可查到mac地址，即以太网适配器的物理地址
+ipconfig /all  ::可查到mac地址，即以太网适配器的物理地址
 
 ### 查看网络活动连接，将为您提供当前打开的端口和相关IP地址的列表
 netstat -an
@@ -100,9 +100,9 @@ C:\>shutdown /?
 ``` 
 
 ```
-shutdown /h        # 休眠（hibernate）本地计算机
+shutdown /h        :: 休眠（hibernate）本地计算机
 shutdown /r /o #重启你的电脑进入高级启动选项菜单，你可以在这里访问安全模式和Windows恢复实用程序 
-shutdown /s /t 30 # 30秒后关闭计算机
+shutdown /s /t 30  ::30秒后关闭计算机
 ```              
 
 ### sfc, System File Checker
@@ -110,10 +110,10 @@ sfc, System File Checker是一种自动扫描和修复工具，专注于Windows�
 
 ### tasklist 和 taskkill
 ```
-tasklist /svc #显示与每个任务相关的服务  
-tasklist /v   #详细任务列表  
-tasklist /m   #定位与活动任务相关的DLL文件
-TASKKILL /F /IM QQ* /T #强制结束QQ开头的进程及其子进程
+tasklist /svc ::显示与每个任务相关的服务  
+tasklist /v   ::详细任务列表  
+tasklist /m   ::定位与活动任务相关的DLL文件
+TASKKILL /F /IM QQ* /T ::强制结束QQ开头的进程及其子进程
 taskkill /F /pid 3328 /pid 3360 /T
 ```
 
@@ -125,6 +125,14 @@ netsh wlan show all
 
 netsh(Network Shell) 是一个windows系统本身提供的功能强大的网络配置命令行工具
 
+### Windows用户管理命令，黑客必知必会
+```
+net user cody 123456 /add
+net user cody localgroup Administrators
+net user cody /ACTIVE:YES
+net user cody 654321  :: 把cody的密码改为654321
+net user John /delete
+```
 
 HTML&Javascript&CSS
 ----
@@ -223,6 +231,18 @@ Linux中合并的命令行为:
 ### Javascript Tricks and Bookmarklets 
 
 ```
+// 一些最基本的Javascript技巧
+    !!foo //转为bool值
+    ~~2.235 // 2，取整，~ 是按位取非运算符
+    ~~-2.235 // -2
+    Math.floor(-2.235) // -3
+    ~~ "-3.05" // -3 ， 这里~~代替了parseInt的作用
+    ~~ "3.2E10" // 1935228928
+    +"-12.56"   // -12.56 ， parseInt
+    +!![]       // 1 , +!![]===+true===1
+    v=[] && 10  // 10
+    v=[] || 10  // []
+
 // 创建过去七天的数组
 [...Array(7).keys()].map(days => new Date(Date.now() - 86400000 * days));
 
