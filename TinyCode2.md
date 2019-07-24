@@ -12,7 +12,26 @@ https://github.com/2293/tinycode/
 
 人物风云
 ----
-
+2019年世界上最受欢迎的经典大牌程序员
+比尔盖茨（微软联合创始人）
+James Gosling（Java Creator）
+Richard Stallman（GNU项目创建者）
+Bjarne Stroustrup（C ++ Creator）
+Tim Beners-Lee（HTML和WWW发明人）
+Ken Thompson（UNIX共同创作者）
+Linus Torvalds（Linux内核创建者）
+Dennis Ritchie（C编程语言创建者）
+杰克多尔西（Twitter创作者）
+Ruchi Sanghvi（FB的第一位女工程师）
+德鲁休斯顿（Dropbox Creator）
+马克·扎克伯格（FB创始人）
+拉里·沃尔（Perl语言）
+Yukihiro Matsumoto（Ruby翻译）
+John Resig（Jquery，Javascript库）
+Phil Katz（ZIP格式）
+Rasmus Lerdorf（PHP Creator）
+Niklaus Wirth（Pascal Creator）
+约翰麦卡锡（Lisp）
 
 神奇命令行&冷酷网址
 ----
@@ -305,16 +324,18 @@ arr.slice().sort(() => Math.random() - 0.5)
 // 数组去重
 [...new Set(arr)]
 
-// 用字符串返回一个键盘图形
+//数字从右边起，隔三位加上一个逗号
+'1234567890'.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+```
 
+<pre>
+// 用字符串返回一个键盘图形
 (_=>[..."`1234567890-=~~QWERTYUIOP[]\\~ASDFGHJKL;'~~ZXCVBNM,./~"].map(x=>(o+=`/${b='_'.repeat(w=x<y?2:' 667699'[x=["BS","TAB","CAPS","ENTER"][p++]||'SHIFT',p])}\\|`,m+=y+(x+' ').slice(0,w)+y+y,n+=y+b+y+y,l+=' __'+b)[73]&&(k.push(l,m,n,o),l='',m=n=o=y),m=n=o=y='|',p=l=k=[])&&k.join`
 
 `)()
+</pre>
 
-```
 
-//数字从右边起，隔三位加上一个逗号
-'1234567890'.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 
 
 Python 奇巧异技
