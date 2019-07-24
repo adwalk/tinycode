@@ -13,6 +13,26 @@ https://github.com/2293/tinycode/
 人物风云
 ----
 
+世界上最受欢迎的经典大牌程序员
+BillGatesGates（比尔盖茨, 微软联合创始人）
+James Gosling（Java Creator）
+Richard Stallman（GNU项目创建者）
+Bjarne Stroustrup（C ++ Creator）
+Tim Beners-Lee（HTML和WWW发明人）
+Ken Thompson（UNIX共同创作者）
+Linus Torvalds（Linux内核创建者）
+Dennis Ritchie（C编程语言创建者）
+Jack Patrick Dorsey（杰克多尔西, Twitter创作者）
+Ruchi Sanghvi（FB的第一位女工程师）
+德鲁休斯顿（Dropbox Creator）
+Mark Zuckerberg（马克·扎克伯格Facebook创始人）
+Larry Wall（1954年9月27日－, Perl语言）
+Yukihiro Matsumoto（Ruby翻译）
+John Resig（Jquery，Javascript库）
+Phil Katz（ZIP格式）
+Rasmus Lerdorf（PHP Creator）
+Niklaus Wirth（Pascal Creator）
+约翰麦卡锡（Lisp）
 
 神奇命令行&冷酷网址
 ----
@@ -330,8 +350,10 @@ import antigravity
 
 ###
 ```
+ #打印乘法表
 print('\n'.join([' '.join(['%s*%s=%-2s' % (y, x, x*y) for y in range(1, x+1)]) for x in range(1, 10)]))
 
+ #代码情书
 print('\n'.join([''.join([('IloveU'[(x-y)%len('IloveU')]if((x*0.05)**2+(y*0.1)**2-1)**3-(x*0.05)**2*(y*0.1)**3<=0 else' ')for x in range(-30,30)])for y in range(15,-15,-1)]))
 ```
 
