@@ -162,8 +162,8 @@ TASKKILL /F /IM QQ* /T ::强制结束QQ开头的进程及其子进程
 taskkill /F /pid 3328 /pid 3360 /T
 ```
 
-### 发送消息给局域网内的Windows在线用户
-msg /server:192.168.0.102 * "你好,聊会儿吧"
+### 发送消息给Windows在线用户，局域网内适用
+msg /server:192.168.1.6 * "你好,聊会儿吧 \n C:>msg /server:192.168.1.5 * 好呀"
 
 ### 显示完整的无线设备和网络信息
 netsh wlan show all
@@ -280,12 +280,125 @@ Linux中合并的命令行为:
 ① 阅读 https://vuejs.org/ ,遇到vue-devtools和ngrok.com, ngrok让我深深着迷，浮想联翩……  
 `git clone https://github.com/vuejs/vue  F:\cloud\opensource\vue` by Github Desktop 2.1.0  
 因为好奇，实际上我还一口气clone了{vuejs/vue-cli vuejs/vue-devtools vuejs/vuepress cdnjs/cdnjs mjackson/unpkg}  
+
 ② open `F:\cloud\opensource\vue` with Visual Studio Code 1.37.0  
 F:\cloud\opensource\vue>py -m http.server 80
-
 http://127.0.0.1/examples/markdown/
+http://127.0.0.1/examples/svg/
+... ...
+浏览这些范例, VScode中对照翻阅源码, 很快就领会了Vue.js的创意与重点
 
-③④⑤⑥⑦⑧⑨⑩
+③ 接下来再次探索性的研读https://vuejs.org/v2/guide/ , 同时我就在vue项目的examples目录中编写了我的第一个vuejs应用examples/hi, 它是这次快乐历程的记录，也是我的笔记。
+
+file: examples/hi/index.html  
+```html
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <title>hi Vue.js</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <p>{{ message }}<br>{{somename}}</p>
+    <p>{{ currentTime }}</p>
+    <input type="text" v-model="somename">
+    <span v-bind:title="somename">这个span的title属性动态展示app1.somename的值</span>
+    <span v-if="seen">Now you see me</span>
+
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+
+    <button v-on:click="somename= genRandomWord(5)">随机取名</button>
+    
+  </div>
+
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+	somename:'qwert',
+        message: 'Hello Vue.js! 这是一个多美丽又遗憾的世界 ',       
+        seen: true,
+        //控制台中输入 vm.seen=false 使它不显示
+        todos: [
+          { text: 'Learn JavaScript' },
+          { text: 'Learn Vue' },
+          { text: 'Build something awesome' }
+        ]
+        //vm.todos.push({ text: '找到你' })
+      },
+      computed: { currentTime: () => new Date().toLocaleString()},
+      methods: {
+        genRandomWord: (len) => 'abcdefghijklmnopqrstuvwxyz'.split('').sort(() => 0.5 - Math.random()).join('').substr(0, len)
+      }
+    })
+  </script>
+</body>
+</html>
+```
+
+file: examples/hi/component.html  
+```
+<script src="https://unpkg.com/vue"></script>
+<div id="app-7">
+    <ol>
+        <component1 v-for="x in publishList" v-bind:obj="x" v-bind:key="x.id"></component1>
+    </ol>
+</div>
+<script>
+  Vue.component('component1', {
+    props: ['obj'],
+    template: '<li>{{ obj.organization }} - {{ obj.url }}</li>'
+  })
+  
+   /* vm short for ViewModel */
+  var vm = new Vue({
+    el: '#app-7',
+    data: {
+      publishList: [
+        { id: 0, organization: '华章图书', url: 'www.hzbook.com' },
+        { id: 1, organization: '博文视点', url: 'http://www.broadview.com.cn'  },
+        { id: 2, organization: "O'Reilly 北京", url: 'http://www.oreilly.com.cn'  }
+      ]
+    }
+  })
+  </script>
+```
+
+总结一下，
+- v-bind  ,简写样例`<a :href="url"> ... </a>`
+- v-model
+- v-for
+- v-if
+- v-else-if
+- v-else
+- v-show
+- v-on:click ，简写样例` <a @click="doSomething"> ... </a>`
+- <a v-on:[eventName]="doSomething"> ... </a>  动态参数 dynamic arguments
+- {{somename | capitalize }}  这里capitalize是一个filter,首字母大写
+
+```
+//Vuejs模板语法(Vuejs Template Syntax)
+{{ number + 1 }}
+{{ ok ? 'YES' : 'NO' }}
+{{ message.split('').reverse().join('') }}
+<div v-bind:id="'list-' + id"></div>
+```
+④ 使用vue-cli
+> npm uninstall vue-cli -g #如果你安装了以前的版本(1.x, 2.x)  
+npm install -g @vue/cli  
+vue --version  
+  3.10.0
+vue ui
+
+
+⑤⑥⑦⑧⑨⑩
 
 
 ### Javascript Tricks and Bookmarklets 
@@ -342,14 +455,18 @@ arr.slice().sort(() => Math.random() - 0.5)
 
 //数字从右边起，隔三位加上一个逗号
 '1234567890'.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+
+//freeze冻结对象，使它不可修改
+var obj = {foo: 'bar'};
+Object.freeze(obj);
 ```
 
-<pre>
+```
 // 用字符串返回一个键盘图形
 (_=>[..."`1234567890-=~~QWERTYUIOP[]\\~ASDFGHJKL;'~~ZXCVBNM,./~"].map(x=>(o+=`/${b='_'.repeat(w=x<y?2:' 667699'[x=["BS","TAB","CAPS","ENTER"][p++]||'SHIFT',p])}\\|`,m+=y+(x+' ').slice(0,w)+y+y,n+=y+b+y+y,l+=' __'+b)[73]&&(k.push(l,m,n,o),l='',m=n=o=y),m=n=o=y='|',p=l=k=[])&&k.join`
 
 `)()
-</pre>
+```
 
 
 
@@ -365,7 +482,8 @@ python -c "while 1:import random;print(random.choice('^_^'), end='')"
 ### 一行代码看漫画
 import antigravity
 
-###
+### 打印心形图案
+
 ```
 print('\n'.join([' '.join(['%s*%s=%-2s' % (y, x, x*y) for y in range(1, x+1)]) for x in range(1, 10)]))
 
