@@ -8,30 +8,31 @@ Tiny Code 2-Coming from Wave
 http://2293.ml/tinycode/
 https://github.com/2293/tinycode/
 
-[toc]
+[TOC]
 
 人物风云
 ----
 2019年世界上最受欢迎的经典大牌程序员
-比尔盖茨（微软联合创始人）
-James Gosling（Java Creator）
-Richard Stallman（GNU项目创建者）
-Bjarne Stroustrup（C ++ Creator）
-Tim Beners-Lee（HTML和WWW发明人）
-Ken Thompson（UNIX共同创作者）
-Linus Torvalds（Linux内核创建者）
-Dennis Ritchie（C编程语言创建者）
-杰克多尔西（Twitter创作者）
-Ruchi Sanghvi（FB的第一位女工程师）
-德鲁休斯顿（Dropbox Creator）
-马克·扎克伯格（FB创始人）
-拉里·沃尔（Perl语言）
-Yukihiro Matsumoto（Ruby翻译）
-John Resig（Jquery，Javascript库）
-Phil Katz（ZIP格式）
-Rasmus Lerdorf（PHP Creator）
-Niklaus Wirth（Pascal Creator）
-约翰麦卡锡（Lisp）
+
+- 比尔盖茨（微软联合创始人）
+- James Gosling（Java Creator）
+- Richard Stallman（GNU项目创建者）
+- Bjarne Stroustrup（C ++ Creator）
+- Tim Beners-Lee（HTML和WWW发明人）
+- Ken Thompson（UNIX共同创作者）
+- Linus Torvalds（Linux内核创建者）
+- Dennis Ritchie（C编程语言创建者）
+- 杰克多尔西（Twitter创作者）
+- Ruchi Sanghvi（FB的第一位女工程师）
+- 德鲁休斯顿（Dropbox Creator）
+- 马克·扎克伯格（FB创始人）
+- 拉里·沃尔（Perl语言）
+- Yukihiro Matsumoto（Ruby翻译）
+- John Resig（Jquery，Javascript库）
+- Phil Katz（ZIP格式）
+- Rasmus Lerdorf（PHP Creator）
+- Niklaus Wirth（Pascal Creator）
+- 约翰麦卡锡（Lisp）
 
 神奇命令行&冷酷网址
 ----
@@ -141,13 +142,13 @@ C:\>shutdown /?
                是计划外的。
                xx 是主要原因编号(小于 256 的正整数)。
                yy 是次要原因编号(小于 65536 的正整数)。
-``` 
+```
 
 ```
 shutdown /h        :: 休眠（hibernate）本地计算机
-shutdown /r /o #重启你的电脑进入高级启动选项菜单，你可以在这里访问安全模式和Windows恢复实用程序 
+shutdown /r /o ::重启你的电脑进入高级启动选项菜单，你可以在这里访问安全模式和Windows恢复实用程序 
 shutdown /s /t 30  ::30秒后关闭计算机
-```              
+```
 
 ### sfc, System File Checker
 sfc, System File Checker是一种自动扫描和修复工具，专注于Windows系统文件
@@ -270,6 +271,21 @@ Linux中合并的命令行为:
 `> cat `which nw` app.nw > app && chmod +x app `
 
 具体细节可参考官方文档 https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps
+
+### 快速学习vuejs
+**基于examples构建是开发项目的最快方式！**
+
+下面分享一下我学习vuejs的快乐历程：
+
+① 阅读 https://vuejs.org/ ,遇到vue-devtools和ngrok.com, ngrok让我深深着迷，浮想联翩……  
+`git clone https://github.com/vuejs/vue  F:\cloud\opensource\vue` by Github Desktop 2.1.0  
+因为好奇，实际上我还一口气clone了{vuejs/vue-cli vuejs/vue-devtools vuejs/vuepress cdnjs/cdnjs mjackson/unpkg}  
+② open `F:\cloud\opensource\vue` with Visual Studio Code 1.37.0  
+F:\cloud\opensource\vue>py -m http.server 80
+
+http://127.0.0.1/examples/markdown/
+
+③④⑤⑥⑦⑧⑨⑩
 
 
 ### Javascript Tricks and Bookmarklets 
