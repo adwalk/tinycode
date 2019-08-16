@@ -284,11 +284,13 @@ Linux中合并的命令行为:
 ② open `F:\cloud\opensource\vue` with Visual Studio Code 1.37.0  
 F:\cloud\opensource\vue>py -m http.server 80
 http://127.0.0.1/examples/markdown/
-http://127.0.0.1/examples/svg/
+examples/svg/
+benchmarks/svg/
+
 ... ...
 浏览这些范例, VScode中对照翻阅源码, 很快就领会了Vue.js的创意与重点
 
-③ 接下来再次探索性的研读https://vuejs.org/v2/guide/ , 同时我就在vue项目的examples目录中编写了我的第一个vuejs应用examples/hi, 它是这次快乐历程的记录，也是我的笔记。
+③ 接下来再次探索性的研读https://vuejs.org/v2/guide/ , 一边就在vue项目的examples目录中编写了我的第一个vuejs应用examples/hi, 它是这次快乐历程的记录，也是我的笔记。
 
 file: examples/hi/index.html  
 ```html
@@ -400,6 +402,89 @@ vue ui
 
 ⑤⑥⑦⑧⑨⑩
 
+### 5分钟掌握Angularjs
+
+```
+<script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+<div ng-app="">
+  <p>名字 : <input type="text" ng-model="name"></p>
+  <h1>Hello {{name}}</h1>
+  <p>{{5+5}}</p>
+</div>
+
+```
+
+ng-repeat
+```
+<div ng-app="" ng-init="primes=[2,3,5,7,11,13,17,19]"> 
+<ul>
+  <li ng-repeat="x in primes">
+    {{ x }}
+  </li>
+</ul>
+```
+
+```
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-guide-concepts-1-production</title>
+ <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+</head>
+<body >
+  <div ng-app ng-init="qty=1;cost=2">
+  <b>Invoice:</b>
+  <div>
+    Quantity: <input type="number" min="0" ng-model="qty">
+  </div>
+  <div>
+    Costs: <input type="number" min="0" ng-model="cost">
+  </div>
+  <div>
+    <b>Total:</b> {{qty * cost | currency}}
+  </div>
+</div>
+</body>
+</html>
+```
+
+模块module 控制器controller
+```
+<div ng-app="myApp" ng-controller="myCtrl">
+名: <input type="text" ng-model="firstName"><br>
+姓: <input type="text" ng-model="lastName"><br>
+<br>
+姓名: {{firstName + " " + lastName}} 
+</div>
+ 
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "John";
+    $scope.lastName= "Doe";
+});
+</script>
+```
+
+自定义指令
+```
+<div foo-directive></div>
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("fooDirective", function() {
+    return {
+        restrict : "A",
+        template : "<h1>自定义指令!</h1>"
+    };
+});
+</script>
+```
+
+angularjs cheat sheet
+
+https://www.runoob.com/angularjs/angularjs-tutorial.html
 
 ### Javascript Tricks and Bookmarklets 
 
