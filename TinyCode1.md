@@ -102,6 +102,12 @@ C:\> ftype musicSheetFile=musicEditor.exe "%1" %*
 ```
 
 ### git使用精要
+初次运行前的配置
+```
+$ git config --global user.name "a-boy"
+$ git config --global user.email "a-boy@xxx.com"
+$ git config --list
+```
 You can obtain Vim for the first time with:
 ```
 git clone https://github.com/vim/vim.git
