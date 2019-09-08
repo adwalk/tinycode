@@ -577,10 +577,26 @@ print('\n'.join([''.join([('IloveU'[(x-y)%len('IloveU')]if((x*0.05)**2+(y*0.1)**
 
 ## 数学探索与发现
 ### 将自然数表示成三个立方数之和
+```
 33 = 8866128975287528^3 - 8778405442862239^3 -2736111468807040^3
 42 =(-80538738812075974)^3 + 80435758145817515^3 + 12602123297335631^3
- 1 =  (9t^3 + 1)^3 + (9t^4)^3 + (-9t^4 - 3t)^3 
- 2 = (6t^3 + 1)^3 + (-6t^3 - 1)^3 + (-6t^2)^3
+ 1 = (9t^3 + 1)^3 + (9t^4)^3 + (-9t^4 - 3t)^3 
+ 2 = (6t^3 + 1)^3 + (-6t^3 + 1)^3 + (-6t^2)^3
 ...
-0和形如9k±4的数不可写成三个立方数之和，其余的都可以。
+```
+0和形如9k±4的数不可写成三个立方数之和，其余的都可以。  
 Remark: for n≤1000, the problem is still open only for 114, 165, 390, 579, 627, 633, 732, 795, 906, 921, and 975
+
+### 证明哥德巴赫猜想
+2019-09-02, Cody Luo(cody@ustc.edu)发表了Goldbach Conjecture的一个证明，使用sagemath作为计算文档工具，以"分配各不相同质因数"的方法，发现并证明了两个简洁的不等式：  
+```
+Goldbach Conjecture Inequality 1: gold(n) < prime_pi(n)+sigma(n,0)
+gold(n): the min non-negative integer makes that both n-g and n+g are primes
+prime_pi(n): the count of primes in 1..n
+sigma(n,0): the count of n.divisors()
+
+gold(n) < prime_pi(n), while n>344 
+gold(n) < prime_pi(n)*4395/3449751 ≈ prime_pi(n)*0.0013, while n>57989356
+
+Goldbach Conjecture Inequality 2: gold(n) < prime_pi(prime_pi(n)+n)
+```
