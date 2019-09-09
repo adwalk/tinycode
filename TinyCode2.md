@@ -590,7 +590,7 @@ a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-bc-ca)
 Remark: for n≤1000, the problem is still open only for 114, 165, 390, 579, 627, 633, 732, 795, 906, 921, and 975
 
 ### 证明哥德巴赫猜想
-2019-09-02, Cody Luo(cody@ustc.edu)发表了Goldbach Conjecture的一个证明，使用sagemath作为计算文档工具，以"分配各不相同质因数"的方法，发现并证明了两个简洁的不等式：  
+2019-09-02,中国科大毕业的程序员 Cody Luo(cody@ustc.edu)发表了Goldbach Conjecture的一个证明，使用Sagemath作为计算文档工具，以"分配各不相同质因数"的方法，发现并证明了两个简洁的不等式：  
 ```
 Goldbach Conjecture Inequality 1: gold(n) < prime_pi(n)+sigma(n,0)
 gold(n): the min non-negative integer makes that both n-g and n+g are primes
