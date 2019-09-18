@@ -3,7 +3,7 @@ Tiny Code 2-Coming from Wave
 小代码 2-浪沫迩来
 ====
 
-又名 《火星人学习报》第2期 代号:浪沫迩来 2019年6月
+又名 《火星人学习报》第2期 代号:浪沫迩来 2019年6月 ~ 2019年9月
 
 http://2293.ml/tinycode/
 https://github.com/2293/tinycode/
