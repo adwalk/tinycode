@@ -533,7 +533,7 @@ arr=[...Array(7).keys()]
 arr.slice().sort(() => Math.random() - 0.5)
 
 // 生成随机十六进制颜色代码 如：'#c618b2'
-'#' + Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, '0');
+'#' + Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0');
 
 // 数组去重
 [...new Set(arr)]
