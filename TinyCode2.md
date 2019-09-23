@@ -12,27 +12,29 @@ https://github.com/2293/tinycode/
 
 人物风云
 ----
-2019年世界上最受欢迎的经典大牌程序员
+世界上最受欢迎的经典大牌程序员
 
-- 比尔盖茨（微软联合创始人）
+- Bill Gates（1955.10.28, 微软联合创始人）
 - James Gosling（Java Creator）
 - Richard Stallman（GNU项目创建者）
 - Bjarne Stroustrup（C ++ Creator）
-- Tim Beners-Lee（HTML和WWW发明人）
+- Tim Beners-Lee（1955.06.08-, HTML和WWW发明人）
 - Ken Thompson（UNIX共同创作者）
 - Linus Torvalds（Linux内核创建者）
 - Dennis Ritchie（C编程语言创建者）
-- 杰克多尔西（Twitter创作者）
+- Jack Dorsey（Twitter创作者）
 - Ruchi Sanghvi（FB的第一位女工程师）
-- 德鲁休斯顿（Dropbox Creator）
-- 马克·扎克伯格（FB创始人）
-- 拉里·沃尔（Perl语言）
+- Drew Houston（Dropbox Creator）
+- Mark Elliot Zuckerberg(1984.05.14-, FB创始人)
+- Larry Wall(1954年9月27日-, Perl语言)
 - Yukihiro Matsumoto（Ruby翻译）
 - John Resig（Jquery，Javascript库）
 - Phil Katz（ZIP格式）
+- Igor Pavlov (ipavlov, 7-zip creator)
 - Rasmus Lerdorf（PHP Creator）
 - Niklaus Wirth（Pascal Creator）
-- 约翰麦卡锡（Lisp）
+- John McCarthy (1927.09.04 - 2011.10.24, 发明Lisp语言)
+- Brendan Eich(JavaScript creator, https://brendaneich.com )
 
 神奇命令行&冷酷网址
 ----
@@ -46,7 +48,7 @@ https://github.com/2293/tinycode/
 8. 免费网站幻灯片制作工具：http://wowslider.com/ 
 0. 纯情部落  http://2293.ml  
 
-### Windows 10的资源管理器地址栏中输入cmd, 则打开命令行窗口并处于当前路径
+### Windows 10的资源管理器地址栏中输入cmd, 回车则打开命令行窗口并处于当前路径
 
 ### C:\Windows\system32>help
 ```
@@ -598,7 +600,7 @@ HTML 基本文档
 <address> （联系信息）
 <bdo> （文字方向）
 <blockquote> （从另一个源引用的部分）
-<cite> （工作的名称）
+<cite> （引用）
 <del> （删除的文本）
 <ins> （插入的文本）
 <sub> （下标文本）
@@ -740,13 +742,14 @@ print('\n'.join([''.join([('IloveU'[(x-y)%len('IloveU')]if((x*0.05)**2+(y*0.1)**
  2 = (6t^3 + 1)^3 + (-6t^3 + 1)^3 + (-6t^2)^3
 (a+b)^3 - a^3 - b^3 = 3ab(a+b)
 a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-bc-ca)
+F[3*n] = F[n+1]^3+F[n]^3-F[n-1]^3 = 2*F[n]^3+3*F[n+1]*F[n]*F[n-1] = 5*F[n]^3+3*(-1)^n*F[n] , here Fibonacci Sequence F[n]=F[n-1]+F[n-2], F[0]=0,F[1]=1
 ...
 ```
 0和形如9k±4的数不可写成三个立方数之和，其余的都可以。  
 Remark: for n≤1000, the problem is still open only for 114, 165, 390, 579, 627, 633, 732, 795, 906, 921, and 975
 
 ### 证明哥德巴赫猜想
-2019-09-02,中国科大毕业的程序员 Cody Luo(cody@ustc.edu)发表了Goldbach Conjecture的一个证明，使用Sagemath作为计算文档工具，以"分配各不相同质因数"的方法，发现并证明了两个简洁的不等式：  
+2019-09-02,中国科大毕业的程序员 Cody Luo(cody@ ustc.edu)发表了Goldbach's Conjecture的一个证明，使用Sagemath作为计算文档工具，以"分配各不相同质因数"的方法，发现并证明了两个简洁的不等式：  
 ```
 Goldbach Conjecture Inequality 1: gold(n) < prime_pi(n)+sigma(n,0)
 gold(n): the min non-negative integer makes that both n-g and n+g are primes
