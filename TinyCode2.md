@@ -71,6 +71,13 @@ CALL           从另一个批处理程序调用这一个。
 ### 获取安装的驱动程序信息
 driverquery -v
 
+### 查看BIOS版本
+```
+C:\Users\ljl>wmic bios get smbiosbiosversion
+SMBIOSBIOSVersion
+6QET70WW (1.40 )
+```
+
 ### ip地址管理和查询
 ipconfig /release  
 ipconfig /renew  
@@ -558,15 +565,14 @@ Object.freeze(obj);
 HTML速查表
 ----
 ```
-HTML 基本文档
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
 <meta charset="utf-8">
-<title>文档标题</title>
+<title>网页标题</title>
 </head>
 <body>
-文档内容......
+HTML 基本文档。内容......
 </body>
 </html>
 
@@ -596,31 +602,39 @@ HTML 基本文档
 <small>更小的文本</small>
 <strong>重要的文本</strong>
  
-<abbr> （缩写）
-<address> （联系信息）
-<bdo> （文字方向）
-<blockquote> （从另一个源引用的部分）
-<cite> （引用）
-<del> （删除的文本）
-<ins> （插入的文本）
-<sub> （下标文本）
-<sup> （上标文本）
+<abbr> UFO（缩写）</abbr>
+<address> （联系信息）</address>
+<bdo dir="rtl"> （文字方向）</bdo>
+<blockquote> （从另一个源引用的部分）</blockquote>
+<cite> （引用）</cite>
+<del>删除的文本</del>
+<ins>插入的文本</ins>
+<sub>下标<sub>
+<sup>上标</sup>
 链接（Links）
-普通的链接：<a href="http://www.example.com/">链接文本</a>
-图像链接： <a href="http://www.example.com/"><img src="URL" alt="替换文本"></a>
-邮件链接： <a href="mailto:webmaster@example.com">发送e-mail</a>
+普通的链接：<a href="http://2293.ml">链接文本</a>
+图像链接： <a href="http://www.example.com/" target="_blank"><img src="URL" alt="替换文本"></a>
+target: _self _blank _parent _top     rel="noreferrer" rel="noopener" <br>
+<a href="tel:+123456789">Phone</a>
+<a href="mailto:webmaster@example.com">发送e-mail</a>
+
 书签：
 <a name="tips">提示部分</a>
 <a href="#tips">跳到提示部分</a>
 图片（Images）
 <img src="URL" alt="替换文本" height="42" width="42">
+
 样式/区块（Styles/Sections）
 <style type="text/css">
 h1 {color:red;}
-p {color:blue;}
+p {border:1px dashed blue;}
 </style>
-<div>文档中的块级元素</div>
+<div>文档中的块级元素。
+ HTTP request methods: HEAD GET POST PUT DELETE CONNECT OPTIONS TRACE PATCH
+ <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
+</div>
 <span>文档中的内联元素</span>
+
 无序列表
 <ul>
     <li>项目</li>
@@ -633,51 +647,66 @@ p {color:blue;}
 </ol>
 定义列表
 <dl>
-  <dt>项目 1</dt>
-    <dd>描述项目 1</dd>
-  <dt>项目 2</dt>
-    <dd>描述项目 2</dd>
+  <dt>dinosaur</dt>
+    <dd>n.恐龙；守旧落伍的人；过时落后的东西<br>
+[网络]恐龙世纪；古生恐龙；小恐龙</dd>
+  <dt>pug</dt>
+    <dd>n.哈巴狗 [网络]巴哥犬；八哥犬；帕格</dd>
 </dl>
+
 表格（Tables）
 <table border="1">
+ <caption>标题</caption>
+ <thead>
   <tr>
-    <th>表格标题</th>
-    <th>表格标题</th>
+    <th>列1</th>
+    <th colspan="2">合并的两列</th>
   </tr>
+ </thead>
   <tr>
-    <td>表格数据</td>
-    <td>表格数据</td>
+    <td>1，1</td>
+    <td>1，2</td>
+	<td>1，3</td>
   </tr>
 </table>
 框架（Iframe）
-<iframe src="demo_iframe.htm"></iframe>
+<iframe src="data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 表单（Forms）
-<form action="demo_form.php" method="post/get">
-<input type="text" name="email" size="40" maxlength="50">
-<input type="password">
+<form action="demo_form.php" method="post">
+<fieldset><legend>栏目1</legend>
+ <input type="text" name="email" size="40" maxlength="50">
+ <input type="password" name="pwd">
+</fieldset>
+
+<input type="range" name="" min="" max="">
+<input type="week" name="">
+<input type="color" name="">
 <input type="checkbox" checked="checked">
 <input type="radio" checked="checked">
 <input type="submit" value="Send">
 <input type="reset">
 <input type="hidden">
-<select>
+<select name="favFruit" multiple size="4">
 <option>苹果</option>
 <option selected="selected">香蕉</option>
 <option>樱桃</option>
 </select>
-<textarea name="comment" rows="60" cols="20"></textarea>
+<textarea name="comment" rows="60" cols="20">
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄą
+</textarea>
  
 </form>
 实体（Entities）
-&lt; 等同于 <
-&gt; 等同于 >
-&#169; 等同于 ©
+&lt; &gt; &amp; &quot; &copy; &trade; &nbsp; &#169; 
+ <    >    &     "      ©      ™      space   ©  
 
 HTML5提供了新的元素来创建更好的页面结构：
 标签 	描述
 <article> 	定义页面独立的内容区域。
-<aside> 	定义页面的侧边栏内容。
-<bdi> 	允许您设置一段文本，使其脱离其父元素的文本方向设置。
+<aside> 	侧边栏内容。
+<bdi> 	一段特殊文本方向的文本。
 <command> 	定义命令按钮，比如单选按钮、复选框或按钮
 <details> 	用于描述文档或文档某个部分的细节
 <dialog> 	定义对话框，比如提示框
@@ -686,14 +715,14 @@ HTML5提供了新的元素来创建更好的页面结构：
 <figcaption> 	定义 <figure> 元素的标题
 <footer> 	定义 section 或 document 的页脚。
 <header> 	定义了文档的头部区域
-<mark> 	定义带有记号的文本。
+<mark> 	带有记号的文本。
 <meter> 	定义度量衡。仅用于已知最大和最小值的度量。
-<nav> 	定义导航链接的部分。
-<progress> 	定义任何类型的任务的进度。
+<nav> 	导航链接的部分。
+<progress> 	任何类型的任务的进度。
 <ruby> 	定义 ruby 注释（中文注音或字符）。
 <rt> 	定义字符（中文注音或字符）的解释或发音。
 <rp> 	在 ruby 注释中使用，定义不支持 ruby 元素的浏览器所显示的内容。
-<section> 	定义文档中的节（section、区段）。
+<section> 	节，区段。
 <time> 	定义日期或时间。
 <wbr> 	规定在文本中的何处适合添加换行符。
 
@@ -703,13 +732,14 @@ HTML5提供了新的元素来创建更好的页面结构：
   如果你的浏览器不支持 video 标签此行将显示...
 </video>
 
-<audio controls>
+<audio controls autoplay>
   <source src="horse.ogg" type="audio/ogg">
   <source src="horse.mp3" type="audio/mpeg">
   <source src="water.wav" type="audio/wav">
 如果你的浏览器不支持 audio 元素此行将显示...
 </audio>
 
+<canvas id="chessboard" width="150" height="150"></canvas>
 ```
 
 
