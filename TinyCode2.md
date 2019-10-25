@@ -506,6 +506,11 @@ https://www.runoob.com/angularjs/angularjs-tutorial.html
     ~~ "-3.05" // -3 ， 这里~~代替了parseInt的作用
     ~~ "3.2E10" // 1935228928
     +"-12.56"   // -12.56 ， parseInt
+	'1.1' + '1.1' // '1.11.1'
+	(+'1.1') + (+'1.1') // 2.2  注意括号仅只增加可读性，可以省略
+    +'1.1'+ +'1.1'	// 2.2
+	// 但是, +'1.1'++'1.1' 会引起语法错误VM255:1 Uncaught SyntaxError: Invalid left-hand side expression in postfix operation
+	
     +new Date   // 时间微秒值再取整，例如1563763275275
     2.33 | 0    // 2
     2.33 >> 0   // 2
@@ -518,9 +523,16 @@ https://www.runoob.com/angularjs/angularjs-tutorial.html
     [{}] + 10;  //"[object Object]10"
     (10)["toString"]() === "10"
     Array(3).fill('a') // ["a", "a", "a"]
+	
+	//关于运算符优先级的实验
+	var [i,j,k]=[1,5,0]
+	k=i+++j // 等价于 k=(i++) + j
+	console.log(i,j,k) // 2 5 6
 
+parseInt('101', 2) // 5
 //Chrome中奇怪的js运算
 parseInt(0.0000008) // 8
+
 
 // 创建过去七天的数组
 [...Array(7).keys()].map(days => new Date(Date.now() - 86400000 * days));
@@ -528,6 +540,11 @@ parseInt(0.0000008) // 8
 // 生成长度为11的随机字母数字字符串
 Math.random().toString(36).substring(2);
 // 4yzqwrvw9iu
+
+// 两种方法生成随机十六进制颜色代码 如：'#c618b2'
+'#' + Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0'); 
+
+'#' +Math.random().toString(16).substr(2,6)
 
 //获取URL的查询参数
 //?foo=bar&baz=bing => {foo: bar, baz: bing}
@@ -541,8 +558,6 @@ q={};location.search.replace(/([^?&=]+)=([^&]+)/g,(_,k,v)=>q[k]=v);q;
 arr=[...Array(7).keys()]
 arr.slice().sort(() => Math.random() - 0.5)
 
-// 生成随机十六进制颜色代码 如：'#c618b2'
-'#' + Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0');
 
 // 数组去重
 [...new Set(arr)]
@@ -553,6 +568,13 @@ arr.slice().sort(() => Math.random() - 0.5)
 //freeze冻结对象，使它不可修改
 var obj = {foo: 'bar'};
 Object.freeze(obj);
+
+//Object.assign 合并对象
+let o1 = { a: 1, b: 1, c: 1 };
+const o2 = { b: 2, c: 2 };
+const o3 = { c: 3 };
+const obj = Object.assign({}, o1, o2, o3);
+console.log(obj); // { a: 1, b: 2, c: 3 }
 ```
 
 ```
@@ -572,7 +594,7 @@ HTML速查表
 <title>网页标题</title>
 </head>
 <body>
-HTML 基本文档。内容......
+内容......
 </body>
 </html>
 
@@ -782,7 +804,7 @@ Remark: for n≤1000, the problem is still open only for 114, 165, 390, 579, 627
 2019-09-02,中国科大毕业的程序员 Cody Luo(cody@ ustc.edu)发表了Goldbach's Conjecture的一个证明，使用Sagemath作为计算文档工具，以"分配各不相同质因数"的方法，发现并证明了两个简洁的不等式：  
 ```
 Goldbach Conjecture Inequality 1: gold(n) < prime_pi(n)+sigma(n,0)
-gold(n): the min non-negative integer makes that both n-g and n+g are primes
+gold(n): the min non-negative integer g makes that both n-g and n+g are primes
 prime_pi(n): the count of primes in 1..n
 sigma(n,0): the count of n.divisors()
 

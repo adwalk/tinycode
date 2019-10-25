@@ -108,32 +108,66 @@ $ git config --global user.name "a-boy"
 $ git config --global user.email "a-boy@xxx.com"
 $ git config --list
 ```
+
+克隆项目  
 You can obtain Vim for the first time with:
 ```
 git clone https://github.com/vim/vim.git
 ```
 
-And, if you don't have local changes, update to the latest version with:
+本地未作更改的情况下，更新到最新版 
+And if you don't have local changes, update to the latest version with:   
 ```
 cd vim
 git pull
 ```
-If you made some changes, e.g. to a makefile, you can keep them and merge with the latest version with:
-```
-git stash
-git pull
-git stash pop
-```
 
-If you have local changes you may need to merge. If you are sure you can discard local changes (e.g. if you were just trying a patch), you can use:
 ```
+如果你想丢弃本地更改，并更新到远程最新版:
+
 git fetch --all
 git reset --hard origin/master
+
+
+如果本地有部分更改 远程也有新的提交，则最好保留本地更改，并与远程最新合并
+If you made some changes, e.g. to a makefile, you can keep them and merge with the latest version with:
+
+$ git stash
+$ git pull
+$ git stash pop
+
+  还有一种更容易理解的做法，**简单思维合并三部曲**：
+  
+  1. ① 备换本地项目文件夹    $ mv vim vim101
+  2. ② 重新克隆项目          $ git clone https://github.com/vim/vim.git
+  3. ③ 再在远程最新版的基础上做必要的更改 ... edit /vim by Copy/Paste from /vim101 ...
+  9. 将vim101的更新复制粘贴到vim文件夹下后，再考虑删除目录vim101    $ rm vim101
+  !!这是我使用svn和git时一贯的做法!!
+
+
+  实际上可以使用 **快速合并三部曲** , 如果项目文件很大或者网速太慢，那么上述的三部曲可以改成 
+  1. ① 复制本地项目文件夹    $ cp --recursive vim vim101
+  2. ② 丢弃本地更改并强制更新到远程最新版   $ git fetch --all && git reset --hard origin/master
+  3. ③ 再在远程最新版的基础上做必要的更改 ... edit ./vim/* by Copy/Paste from ./vim101/* ...
+  9. 考虑是否删除vim101/ 目录    $ rm vim101
+```
+
+检出 git checkout [-p|--patch] [<tree-ish>] [--] <pathspec>…
+```
+检出某个分支下的几个特定文件夹或文件 git checkout <branch_name> -- <paths>  
+$ git checkout gh-pages --  myplugin.js
+
+检出某次提交中的指定文件 git checkout <COMMIT#> <paths>  
+$ git checkout f08a63ff Gemfile
 ```
 
 提交，与修改最后一次提交
 ```
 $ git commit -m 'initial commit'
+
+	-a
+	--all
+	Tell the command to automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected.
 
 $ git add forgotten_file
 $ git commit --amend
@@ -158,24 +192,26 @@ $ git config credential.helper store #保存git密码
 $ git config --global credential.helper 'cache --timeout 7200'  #缓存密码2小时
 ```
 
-switch and delete branch by using
+分支的检出(不存在则会新建)和删除
 ```
 $ git checkout gh-pages
 Switched to branch 'gh-pages'
 $ git branch --delete master # delete a branch in local
-$ git push origin --delete master   # delete a remote branch master, which is easier to remember than git push origin :<branchName>
+$ git push origin --delete master   # delete the remote branch master, which is easier to remember than git push origin :<branchName>
 ```
 
 ```
 git remote set-url origin https://a-boy@github.com/a-boy/playmath #远程地址中带上用户名,Git 1.9以前的版本就会不再回应403 Forbidden而是询问密码
-git remote set-url --add origin git@gitee.com:a-boy/playmath.git # 源origin增加一个远程地址，实现两个repo同步
+git remote set-url --add origin git@gitee.com:ahmeng/playmath.git # 源origin增加一个远程地址，实现两个repo同步
 git remote --verbose #查看所有的远程地址情况
 
 git remote add giteeorigin git@gitee.com:a-boy/playmath.git #也可选择不增加源origin的远程地址，而另增一个源giteeorigin
 git push giteeorigin master # 推送到源giteeorigin
 ```
 
-fork and sync. Here 2293/jaxedit was forked from zohooo/jaxedit,now to sync:
+分叉和同步(fork and sync). 
+需要分叉时在网页上点击 Fork 按钮, Here 2293/jaxedit was forked from zohooo/jaxedit,now to sync:
+现在需要同步 (sync)
 ```
 PS F:\cloud\github\jaxedit> git remote --verbose
 origin  https://github.com/2293/jaxedit.git (fetch)
@@ -186,6 +222,41 @@ PS F:\cloud\github\jaxedit> git fetch upstream
 PS F:\cloud\github\jaxedit> git merge upstream/master
 Updating e88e70e..062430f
 ```
+
+子模块 submodule  https://git-scm.com/docs/git-submodule
+```
+$ git submodule add https://github.com/chaconinc/DbConnector DbConnector
+$ git status
+$ git diff --cached DbConnector
+If you want a little nicer diff output, you can pass the --submodule option to git diff.
+$ git diff --cached --submodule
+
+When you commit, you can do:
+$ git commit -am 'added DbConnector submodule'
+
+Lastly, push these changes:
+$ git push origin master
+
+Cloning a Project with Submodules
+$ git clone https://github.com/chaconinc/MainProject
+$ cd MainProject; ls
+$ cd cd DbConnector/ ; ls
+$ git submodule init
+$ git submodule update
+$ git submodule update --remote
+
+or, you can clone a project with all submodules by:
+$ git clone --recurse-submodules https://github.com/chaconinc/MainProject
+
+To also initialize, fetch and checkout any nested submodules, you can use the foolproof 
+$ git submodule update --init --recursive
+
+$ git log -p --submodule
+
+$ git push --recurse-submodules=check
+$ git push --recurse-submodules=on-demand
+```
+
 ### vagrant and Data Science at the Command Line
 http://datasciencetoolbox.org/
 Download and install VirtualBox, Vagrant, then
