@@ -575,6 +575,9 @@ const o2 = { b: 2, c: 2 };
 const o3 = { c: 3 };
 const obj = Object.assign({}, o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
+
+Object.assign(window,{location:'http://a-boy.tk'})
+
 ```
 
 ```
@@ -582,7 +585,17 @@ console.log(obj); // { a: 1, b: 2, c: 3 }
 (_=>[..."`1234567890-=~~QWERTYUIOP[]\\~ASDFGHJKL;'~~ZXCVBNM,./~"].map(x=>(o+=`/${b='_'.repeat(w=x<y?2:' 667699'[x=["BS","TAB","CAPS","ENTER"][p++]||'SHIFT',p])}\\|`,m+=y+(x+' ').slice(0,w)+y+y,n+=y+b+y+y,l+=' __'+b)[73]&&(k.push(l,m,n,o),l='',m=n=o=y),m=n=o=y='|',p=l=k=[])&&k.join`
 
 `)()
+
+
+var poem = 
+`Roses are red, 
+Violets are blue. 
+Sugar is sweet, 
+and so is foo.` 
+
 ```
+
+
 
 HTML速查表
 ----

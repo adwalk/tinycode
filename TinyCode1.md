@@ -257,6 +257,7 @@ $ git push --recurse-submodules=check
 $ git push --recurse-submodules=on-demand
 ```
 
+
 ### vagrant and Data Science at the Command Line
 http://datasciencetoolbox.org/
 Download and install VirtualBox, Vagrant, then
