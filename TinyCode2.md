@@ -50,6 +50,14 @@ https://github.com/2293/tinycode/
 
 ### Windows 10的资源管理器地址栏中输入cmd, 回车则打开命令行窗口并处于当前路径
 
+### 不蒜子 - 极简网页计数器
+两行代码 搞定计数, 例子: http://a-boy.tk/blog/   本站访问人数：38人次 ， 访问量：83次
+
+```
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+```
+
 ### C:\Windows\system32>help
 ```
 获取某个命令的帮助
@@ -170,6 +178,20 @@ tasklist /m   ::定位与活动任务相关的DLL文件
 TASKKILL /F /IM QQ* /T ::强制结束QQ开头的进程及其子进程
 taskkill /F /pid 3328 /pid 3360 /T
 ```
+
+### Windows Powershell管理员模式下删除Edge浏览器意外的所有内置应用
+Get-AppxPackage -AllUsers | Remove-AppxPackage
+
+### Powershell命令iwr和iex以及Chocolatey的安装
+https://chocolatey.org/ 
+
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+
+choco install youtube-dl
+
+package {['virustotaluploader', 'googlechrome', 'notepadplusplus', '7zip', 'ruby', 'charles', 'grepwin', 'stexbar', 'inkscape', 'gitextensions', 'pandoc', 'snagit', 'nodejs', ]: ensure => latest, source => 'https://chocolatey.org/api/v2/', }
 
 ### 发送消息给Windows在线用户，局域网内适用
 msg /server:192.168.1.6 * "你好,聊会儿吧 \n C:>msg /server:192.168.1.5 * 好呀"

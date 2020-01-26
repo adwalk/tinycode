@@ -183,7 +183,7 @@ git push origin HEAD --force
 ```
 $ git commit -m 'xxx'
 
-$ git reset --soft HEAD^  
+$ git reset --soft ^HEAD  
 ```
 
 保存git密码，不用每次输入git账号密码
