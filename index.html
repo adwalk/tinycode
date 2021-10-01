@@ -26,12 +26,18 @@
 -->
 	<a href="TinyCode1.md">《小代码 1-纯情部落》</a><br>
 	<a href="TinyCode2.md">《小代码 2-浪沫迩来》</a><br>
-	《小代码 3-陨石海沙》<br>
+	<a href="TinyCode3.md">《小代码 3-陨石海沙》</a><br>
 	 4-星沙梦泪<br>
 	 5-茕蚀萦莽<br>
 	 6-夕下仙乡<br>
 	 7-望城南雀<br>
-	<input type="text" name="mdfilename" id="mdfilename" value="TinyCode2.md"><input type="button" value="预览" onclick="preview(document.getElementById('mdfilename').value)">
+	<input type="text" name="mdfilename" id="mdfilename" value="TinyCode2.md" list="tclist"><input type="button" value="预览" onclick="preview(document.getElementById('mdfilename').value)">
+	<datalist id="tclist">
+		<option value="TinyCode1.md">
+		<option value="TinyCode2.md">
+		<option value="TinyCode3.md">
+
+	</datalist>
 	<div id="preview"></div>
 	<script>
 	function preview(url){

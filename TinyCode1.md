@@ -5,7 +5,7 @@ Tiny Code 1-Chunqing Tribe
 
 又名 《火星人学习报》第1期 代号:纯情部落 2016年3月
 
-http://2293.ml/tinycode
+https://2293.ml/tinycode
 https://github.com/2293/tinycode
 
 [toc]

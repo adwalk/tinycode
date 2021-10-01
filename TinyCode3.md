@@ -1,9 +1,9 @@
-Tiny Code 2-Coming from Wave
+Tiny Code 3 - Meteorite Turns into Sea Sand
 ====
-小代码 2-浪沫迩来
+小代码 3 - 陨石海沙
 ====
 
-又名 《火星人学习报》第2期 代号:浪沫迩来 2019年6月 ~ 2019年9月
+又名 《火星人学习报》第3期 代号:陨石海沙 2021年10月 ~ 2021年12月
 
 https://2293.ml/tinycode/
 https://github.com/2293/tinycode/
@@ -12,29 +12,6 @@ https://github.com/2293/tinycode/
 
 人物风云
 ----
-世界上最受欢迎的经典大牌程序员
-
-- Bill Gates（1955.10.28, 微软联合创始人）
-- James Gosling（Java Creator）
-- Richard Stallman（GNU项目创建者）
-- Bjarne Stroustrup（C ++ Creator）
-- Tim Beners-Lee（1955.06.08-, HTML和WWW发明人）
-- Ken Thompson（UNIX共同创作者）
-- Linus Torvalds（Linux内核创建者）
-- Dennis Ritchie（C编程语言创建者）
-- Jack Dorsey（Twitter创作者）
-- Ruchi Sanghvi（FB的第一位女工程师）
-- Drew Houston（Dropbox Creator）
-- Mark Elliot Zuckerberg(1984.05.14-, FB创始人)
-- Larry Wall(1954年9月27日-, Perl语言)
-- Yukihiro Matsumoto（Ruby翻译）
-- John Resig（Jquery，Javascript库）
-- Phil Katz（ZIP格式）
-- Igor Pavlov (ipavlov, 7-zip creator)
-- Rasmus Lerdorf（PHP Creator）
-- Niklaus Wirth（Pascal Creator）
-- John McCarthy (1927.09.04 - 2011.10.24, 发明Lisp语言)
-- Brendan Eich(JavaScript creator, https://brendaneich.com )
 
 神奇命令行&冷酷网址
 ----
