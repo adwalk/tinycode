@@ -1,5 +1,9 @@
 TinyCode 小代码
 =======================
+
+# 此项目已于2022-07-02移至 https://github.com/qingtk/tinycode 
+# This project had moved to https://github.com/qingtk/tinycode at July 02,2022.
+
 Big data, Tiny Code
 
 又名《火星人学习报》
